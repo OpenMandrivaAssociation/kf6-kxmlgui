@@ -29,7 +29,7 @@ BuildRequires: cmake(Qt6PrintSupport)
 BuildRequires: cmake(Qt6QuickTest)
 BuildRequires: cmake(KF6ItemViews)
 BuildRequires: cmake(KF6IconThemes)
-BuildRequires: cmake(KF6IconWidgets)
+BuildRequires: %mklibname -d KF6IconWidgets
 BuildRequires: cmake(KF6GlobalAccel)
 Requires: %{libname} = %{EVRD}
 
