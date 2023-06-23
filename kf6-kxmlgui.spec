@@ -31,6 +31,7 @@ BuildRequires: cmake(KF6ItemViews)
 BuildRequires: cmake(KF6IconThemes)
 BuildRequires: %mklibname -d KF6IconWidgets
 BuildRequires: cmake(KF6GlobalAccel)
+BuildConflicts: xdg-desktop-portal-kde < 5.200
 Requires: %{libname} = %{EVRD}
 
 %description
