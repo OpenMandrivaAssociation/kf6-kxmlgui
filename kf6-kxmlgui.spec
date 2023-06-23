@@ -31,7 +31,8 @@ BuildRequires: cmake(KF6ItemViews)
 BuildRequires: cmake(KF6IconThemes)
 BuildRequires: %mklibname -d KF6IconWidgets
 BuildRequires: cmake(KF6GlobalAccel)
-BuildConflicts: xdg-desktop-portal-kde < 1:5.200
+# Just to make sure we don't pull in plasma5's xdg-desktop-portal-kde
+BuildRequires: plasma6-xdg-desktop-portal-kde
 Requires: %{libname} = %{EVRD}
 
 %description
