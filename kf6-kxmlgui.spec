@@ -34,6 +34,7 @@ BuildRequires: cmake(KF6GlobalAccel)
 # Just to make sure we don't pull in plasma5's xdg-desktop-portal-kde
 BuildRequires: plasma6-xdg-desktop-portal-kde
 Requires: %{libname} = %{EVRD}
+Requires: kxmlgui-default-settings = %{EVRD}
 
 %description
 Framework for managing menu and toolbar actions
@@ -65,6 +66,16 @@ Development files (Headers etc.) for %{name}.
 
 Framework for managing menu and toolbar actions
 
+# This package is split out so KF5 can use it as well.
+# This should be merged back into the main package once
+# we drop KF5.
+%package -n kxmlgui-default-settings
+Summary: Default settings of KXmlGui
+Group: System/Libraries
+
+%description -n kxmlgui-default-settings
+Default settings of KXmlGui
+
 %prep
 %autosetup -p1 -n kxmlgui-%{?git:master}%{!?git:%{version}}
 %cmake \
@@ -83,7 +94,8 @@ Framework for managing menu and toolbar actions
 
 %files -f %{name}.lang
 %{_datadir}/qlogging-categories6/kxmlgui.*
-# FIXME conflicts with KF5
+
+%files -n kxmlgui-default-settings
 %{_sysconfdir}/xdg/ui/
 
 %files -n %{devname}
