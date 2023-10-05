@@ -1,6 +1,6 @@
 %define libname %mklibname KF6XmlGui
 %define devname %mklibname KF6XmlGui -d
-%define git 20230927
+%define git 20231005
 
 Name: kf6-kxmlgui
 Version: 5.240.0
@@ -88,7 +88,6 @@ Framework for managing menu and toolbar actions
 %files -n %{devname}
 %{_includedir}/KF6/KXmlGui
 %{_libdir}/cmake/KF6XmlGui
-%{_qtdir}/mkspecs/modules/qt_KXmlGui.pri
 %{_qtdir}/doc/KF6XmlGui.*
 
 %files -n %{libname}
