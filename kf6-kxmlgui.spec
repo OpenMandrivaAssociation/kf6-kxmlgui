@@ -5,7 +5,7 @@
 #define git 20231103
 
 Name: kf6-kxmlgui
-Version: 5.248.0
+Version: 5.249.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kxmlgui/-/archive/master/kxmlgui-master.tar.bz2#/kxmlgui-%{git}.tar.bz2
