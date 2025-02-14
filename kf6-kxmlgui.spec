@@ -6,7 +6,7 @@
 #define git 20240217
 
 Name: kf6-kxmlgui
-Version: 6.10.0
+Version: 6.11.0
 Release: %{?git:0.%{git}.}1
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kxmlgui/-/archive/master/kxmlgui-master.tar.bz2#/kxmlgui-%{git}.tar.bz2
@@ -20,6 +20,7 @@ Group: System/Libraries
 BuildRequires: cmake
 BuildRequires: cmake(ECM)
 BuildRequires: python
+BuildRequires: python%{pyver}dist(build)
 BuildRequires: cmake(Qt6DBusTools)
 BuildRequires: cmake(Qt6DBus)
 BuildRequires: cmake(Qt6Network)
@@ -100,6 +101,7 @@ Framework for managing menu and toolbar actions
 
 %files -n %{libname}
 %{_libdir}/libKF6XmlGui.so*
+%{_libdir}/python%{pyver}/site-packages/KXmlGui.cpython-*.so
 
 %files -n %{libname}-designer
 %{_qtdir}/plugins/designer/kxmlgui6widgets.so
