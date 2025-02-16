@@ -21,6 +21,9 @@ BuildRequires: cmake
 BuildRequires: cmake(ECM)
 BuildRequires: python
 BuildRequires: python%{pyver}dist(build)
+BuildRequires: python%{pyver}dist(Shiboken6)
+BuildRequires: python%{pyver}dist(PySide6)
+BuildRequires: pkgconfig(python3)
 BuildRequires: cmake(Qt6DBusTools)
 BuildRequires: cmake(Qt6DBus)
 BuildRequires: cmake(Qt6Network)
