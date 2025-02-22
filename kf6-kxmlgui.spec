@@ -7,7 +7,7 @@
 
 Name: kf6-kxmlgui
 Version: 6.11.0
-Release: %{?git:0.%{git}.}1
+Release: %{?git:0.%{git}.}2
 %if 0%{?git:1}
 Source0: https://invent.kde.org/frameworks/kxmlgui/-/archive/master/kxmlgui-master.tar.bz2#/kxmlgui-%{git}.tar.bz2
 %else
@@ -78,6 +78,14 @@ Development files (Headers etc.) for %{name}.
 
 Framework for managing menu and toolbar actions
 
+%package -n python-kxmlgui
+Summary: Python bindings for KXmlGui
+Group: Development/Python
+Requires: %{libname} = %{EVRD}
+
+%description -n python-kxmlgui
+Python bindings for KXmlGui
+
 %prep
 %autosetup -p1 -n kxmlgui-%{?git:master}%{!?git:%{version}}
 %cmake \
@@ -104,6 +112,8 @@ Framework for managing menu and toolbar actions
 
 %files -n %{libname}
 %{_libdir}/libKF6XmlGui.so*
+
+%files -n python-kxmlgui
 %{_libdir}/python%{pyver}/site-packages/KXmlGui.cpython-*.so
 
 %files -n %{libname}-designer
