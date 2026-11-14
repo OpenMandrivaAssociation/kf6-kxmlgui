@@ -45,6 +45,10 @@ BuildRequires: cmake(KF6IconThemes)
 BuildRequires: %mklibname -d KF6IconWidgets
 BuildRequires: cmake(KF6CoreAddons)
 BuildRequires: cmake(KF6ConfigWidgets)
+BuildRequires: cmake(KF6Config)
+BuildRequires: cmake(KF6GuiAddons)
+BuildRequires: cmake(KF6I18n)
+BuildRequires: cmake(KF6WidgetsAddons)
 BuildRequires: cmake(KF6GlobalAccel)
 Requires: %{libname} = %{EVRD}
 Obsoletes: kxmlgui-default-settings < %{EVRD}
